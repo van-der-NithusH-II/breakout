@@ -17,7 +17,7 @@ var block1
 function setup() {
   createCanvas(640, 500);
 
-  block1 = new Block(260,470,100,5)
+  block1 = new Block(260,470,99,5)
 
   
   for(row = 0; row < 3; row++){
