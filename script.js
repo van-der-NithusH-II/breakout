@@ -12,14 +12,17 @@ class Block {
 }
 
 var blocks = []
+var block1
 
 function setup() {
-  createCanvas(600, 500);
+  createCanvas(640, 500);
+
+  block1 = new Block(260,470,100,5)
 
   
   for(row = 0; row < 3; row++){
-    for(i = 0; i < 7; i++){
-      blocks.push(new Block((80 * i) + 10, (50 * row) + 10,70,30))
+    for(i = 0; i < 8; i++){
+      blocks.push(new Block((80 * i) + 10, (50 * row) +10,60,30))
     }  
   }
 
@@ -27,6 +30,7 @@ function setup() {
 
 function draw() {
   background(225);
+
 
   ellipse(310, 450, 20, 20)
 
@@ -36,16 +40,15 @@ function draw() {
     b.draw();
   })
 
-  
-
+block1.draw();
 
 }
 
 function keyPressed() {
   if (keyCode == 37) {
-    block.x -= 5;
+    block1.x -= 5;
   }
   if (keyCode == 39) {
-    block.x += 5;
+    block1.x += 5;
   }
 }
