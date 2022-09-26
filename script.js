@@ -16,6 +16,7 @@ var block1
 
 function setup() {
   createCanvas(640, 500);
+  
 
   block1 = new Block(260,470,99,5)
 
@@ -42,13 +43,12 @@ function draw() {
 
 block1.draw();
 
-}
-
-function keyPressed() {
-  if (keyCode == 37) {
+  if(keyIsDown(37)){
     block1.x -= 5;
   }
-  if (keyCode == 39) {
+  if(keyIsDown(39)){
     block1.x += 5;
   }
+
 }
+
