@@ -9,14 +9,17 @@ class Block {
   draw() {
     rect(this.x, this.y, this.w, this.h);
   }
+
 }
 
 var blocks = []
 var block1
+var ex = 310, ey = 400, ew = 20, eh = 20, xv = 5, yv = -5;
+var px = 260, py = 470, pw = 100;
 
 function setup() {
   createCanvas(640, 500);
-  
+
 
   block1 = new Block(260,470,99,5)
 
@@ -30,10 +33,19 @@ function setup() {
 }
 
 function draw() {
-  background(225);
+  background(0,225,0);
+  
 
 
-  ellipse(310, 450, 20, 20)
+  ellipse(ex, ey, ew, eh)
+  if(ex-ew/2 < 0 || ex+ew/2 > width){
+    xv *=-1
+  }
+  if(ey-ew/2 < 0 || ey+ew/2 > height){
+    yv *=-1
+  }
+  ex+=xv;
+  ey+=yv;
 
   fill("black");
   
@@ -50,5 +62,10 @@ block1.draw();
     block1.x += 5;
   }
 
+  
 }
 
+
+
+
+ 
