@@ -117,7 +117,14 @@ function draw() {
     player.x += 5;
   }
 
+  if(player.x + player.w > 640){
+     player.x = 640 - player.w;
+  } 
 
+  if(player.x < 0){
+     player.x = 0 
+  }
+  
 }
 
 
