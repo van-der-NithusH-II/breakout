@@ -69,6 +69,7 @@ class Block {
       if(this.x < ball.x + ball.w && this.x + this.w > ball.x){
         ball.vy *= -1;
         let idx = blocks.indexOf(this);
+        blocks.splice(idx,1)
         console.log("remove block number [" + idx +"] from the list of balls");
         
       }
