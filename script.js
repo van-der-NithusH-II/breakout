@@ -3,6 +3,8 @@ var player, ball;
 var px = 260, py = 450, pw = 100;
 var gameState = 0;
 let homeScreen;
+var audio = new Audio('Spazzmatica-Polka.mp3');
+
 function setup() {
   createCanvas(640, 500);
 
@@ -53,11 +55,15 @@ function draw() {
   }
 }
 function preload(params) {
-  homeScreen = loadImage('fotobehang-kleurmijninterieur-animals-3638-ve-m-gr.jpg')
+  homeScreen = loadImage('Intro%20page%20replit.jpg')
+   audio.play('Spazzmatica-Polka.mp3');
 }
+
 function keyPressed(){
   if(keyCode === ENTER){
     gameState = 1
+    audio.pause();
+    audio.currentTime = 0;
   }
 }
 
