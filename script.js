@@ -4,7 +4,8 @@ var px = 260, py = 450, pw = 100;
 var gameState = 0;
 let homeScreen;
 var audio = new Audio('Spazzmatica-Polka.mp3');
-var audio1 = new Audio('mixkit-system-break-2942.wav')
+var audio1 = new Audio('cowbell_os_1-89685.mp3')
+var audio2 = new Audio('man-is-he-mega-glbml-22045.mp3')
 
 function setup() {
   createCanvas(640, 500);
@@ -65,6 +66,7 @@ function keyPressed(){
     gameState = 1
     audio.pause();
     audio.currentTime = 0;
+    audio2.play('man-is-he-mega-glbml-22045.mp3')
   }
 }
 

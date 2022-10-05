@@ -21,7 +21,7 @@ class Block {
         console.log("remove block number [" + idx +"] from the list of balls");
 
         if (ball.vy *= -1){
-          audio1.play('mixkit-system-break-2942.wav');
+          audio1.play('cowbell_os_1-89685.mp3');
         }
         
       }
