@@ -7,7 +7,7 @@ class Block {
   }
 
   draw() {
-    fill("#00ffaa")
+    fill("#66ccff")
     rect(this.x, this.y, this.w, this.h);
   }
 
@@ -19,6 +19,10 @@ class Block {
         let idx = blocks.indexOf(this);
         blocks.splice(idx,1)
         console.log("remove block number [" + idx +"] from the list of balls");
+
+        if (ball.vy *= -1){
+          audio1.play('mixkit-system-break-2942.wav');
+        }
         
       }
     }

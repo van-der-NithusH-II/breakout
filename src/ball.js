@@ -9,7 +9,7 @@ class Ball {
   }
   draw() {
     
-    fill("red");
+    fill("#66ccff");
     
     ellipse(this.x, this.y, this.w, this.h);
 

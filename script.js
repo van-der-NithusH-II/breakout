@@ -4,6 +4,7 @@ var px = 260, py = 450, pw = 100;
 var gameState = 0;
 let homeScreen;
 var audio = new Audio('Spazzmatica-Polka.mp3');
+var audio1 = new Audio('mixkit-system-break-2942.wav')
 
 function setup() {
   createCanvas(640, 500);
@@ -22,7 +23,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 0);
+  background(0, 0, 0,);
   if(gameState == 0){
     image(homeScreen, 0,0,640, 500)
   }
