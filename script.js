@@ -6,6 +6,7 @@ let homeScreen;
 var audio = new Audio('Spazzmatica-Polka.mp3');
 var audio1 = new Audio('cowbell_os_1-89685.mp3')
 var audio2 = new Audio('man-is-he-mega-glbml-22045.mp3')
+let Gamescreen;
 
 function setup() {
   createCanvas(640, 500);
@@ -33,7 +34,6 @@ function draw() {
       b.draw();
       b.hit();
     })
-  
     ball.draw();
   
     player.draw();
@@ -66,7 +66,15 @@ function keyPressed(){
     gameState = 1
     audio.pause();
     audio.currentTime = 0;
+  }
+}
+function keyPressed(){
+  if(keyCode === ENTER){
+    gameState = 1
+    audio.pause();
+    audio.currentTime = 0;
     audio2.play('man-is-he-mega-glbml-22045.mp3')
+    audio2.loop = true;
   }
 }
 
