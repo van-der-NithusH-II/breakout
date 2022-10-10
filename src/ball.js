@@ -9,7 +9,7 @@ class Ball {
   }
   draw() {
     
-    fill("red");
+    fill("#66ccff");
     
     ellipse(this.x, this.y, this.w, this.h);
 
@@ -17,7 +17,17 @@ class Ball {
       this.vx *= -1
     }
     if (this.y - this.h / 2 < 0 || this.y + this.h / 2 > height) {
-      this.vy *= -1
+      this.vy *= -1;
+    }
+    if (this.y >= 480){
+      console.log("DIE!");
+      gameState = 0;
+      this.x = 300;
+      this.y = 400;
+      this.w = 20;
+      this.h = 20;
+      this.vx = 5;
+      this.vy = -5;
     }
 
     this.x += this.vx;

@@ -7,7 +7,7 @@ class Player {
   }
 
   draw() {
-    fill("blue")
+    fill("#66ccff")
     rect(this.x, this.y, this.w, this.h);
   }
 

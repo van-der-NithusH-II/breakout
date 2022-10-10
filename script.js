@@ -54,8 +54,22 @@ function draw() {
     if(player.x < 0){
        player.x = 0 
     }
-  }
-}
+    if (blocks.length == 0){
+    console.log("you won");
+    gameState = 0;
+      this.x = 300;
+      this.y = 400;
+      this.w = 20;
+      this.h = 20;
+      this.vx = 5;
+      this.vy = -5;
+      for (row = 0; row < 3; row++) {
+        for (i = 0; i < 8; i++) {
+          blocks.push(new Block((80 * i) + 10, (50 * row) + 10, 60, 30))
+        }
+      }
+    }
+}}
 function preload(params) {
   homeScreen = loadImage('Intro%20page%20replit.jpg')
    audio.play('Spazzmatica-Polka.mp3');
@@ -63,19 +77,18 @@ function preload(params) {
 
 function keyPressed(){
   if(keyCode === ENTER){
-    gameState = 1
+    gameState = 1;
     audio.pause();
     audio.currentTime = 0;
   }
 }
 function keyPressed(){
   if(keyCode === ENTER){
-    gameState = 1
+    gameState = 1;
     audio.pause();
     audio.currentTime = 0;
     audio2.play('man-is-he-mega-glbml-22045.mp3')
     audio2.loop = true;
   }
 }
-
 
