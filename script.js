@@ -7,8 +7,10 @@ var audio = new Audio('Spazzmatica-Polka.mp3');
 var audio1 = new Audio('cowbell_os_1-89685.mp3')
 var audio2 = new Audio('man-is-he-mega-glbml-22045.mp3')
 let Gamescreen;
+var lives = 3;
 
 function setup() {
+  bg = loadImage('Schermopname%20(14).png');
   createCanvas(640, 500);
 
 
@@ -18,14 +20,14 @@ function setup() {
 
   for (row = 0; row < 3; row++) {
     for (i = 0; i < 8; i++) {
-      blocks.push(new Block((80 * i) + 10, (50 * row) + 10, 60, 30))
+      blocks.push(new Block((80 * i) + 10, (50 * row) + 10, 83, 50))
     }
   }
 
 }
 
 function draw() {
-  background(0, 0, 0,);
+  background(bg);
   if(gameState == 0){
     image(homeScreen, 0,0,640, 500)
   }
@@ -63,9 +65,10 @@ function draw() {
       this.h = 20;
       this.vx = 5;
       this.vy = -5;
+      ball.xy = 10;
       for (row = 0; row < 3; row++) {
         for (i = 0; i < 8; i++) {
-          blocks.push(new Block((80 * i) + 10, (50 * row) + 10, 60, 30))
+          blocks.push(new Block((80 * i) + 10, (50 * row) + 10, 83, 50))
         }
       }
     }
