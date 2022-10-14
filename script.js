@@ -51,7 +51,6 @@ function draw() {
     console.log(highscore, 100, 100)
     console.log(prevscore,100, 150)
     console.log(score, 100, 150)
-    
     loadImage(imageheheheha, 0,0);
     
   }
@@ -59,7 +58,7 @@ function draw() {
   }
 }
 
-
+// play the game
 function playGame(){
    blocks.forEach(b => {
       b.draw();
@@ -71,7 +70,8 @@ function playGame(){
     player.draw();
     //check if we hit the ball
     player.hit();
-  
+
+  // the keys to play
     if (keyIsDown(37)) {
       player.x -= 5;
     }
@@ -86,6 +86,8 @@ function playGame(){
     if(player.x < 0){
        player.x = 0 
     }
+
+  // if you won
     if (blocks.length == 0){
       console.log("you won");
       
@@ -118,32 +120,26 @@ function playGame(){
     }
 }
 
+//intro page + intro music
 function preload() {
   homeScreen = loadImage('Intro%20page%20replit.jpg')
   imageheheheha = loadImage('gamestate2.jpg');
   audio.play('Spazzmatica-Polka.mp3');
 }
 
-
+// If the player clicks enter game starts
 function keyPressed(){
   if(keyCode === ENTER){
     gameState = 1;
     audio.pause();
     audio.currentTime = 0;
     prevscore = score
-  }
-}
-function keyPressed(){
-  if(keyCode === ENTER){
-    gameState = 1;
-    audio.pause();
-    audio.currentTime = 0;
-        prevscore = score
-
     audio2.play('man-is-he-mega-glbml-22045.mp3')
     audio2.loop = true;
   }
+
 }
+
 
 
 

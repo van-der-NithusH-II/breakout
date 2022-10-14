@@ -11,6 +11,7 @@ class Ball {
 
     fill("#66ccff");
 
+    //the ball
     ellipse(this.x, this.y, this.w, this.h);
     
     if (this.x - this.w / 2 < 0 || this.x + this.w / 2 > width) {
@@ -19,20 +20,16 @@ class Ball {
     if (this.y - this.h / 2 < 0 || this.y + this.h / 2 > height) {
       this.vy *= -1;
     }
-    
+
+    //if you lose
     if (this.y >= 480) {
+      image(imageheheheha, 0,0)
       console.log("DIE!");
       score = timer
       prevscore = score
       if (prevscore > score) {
         highscore = prevscore
       }
-
-      if(this.y >=480){
-        gameState = 2;
-        imageheheheha
-      }
-
 
       console.log(highscore, 100, 100)
       console.log(prevscore, 100, 150)

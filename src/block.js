@@ -7,12 +7,15 @@ class Block {
   }
   
   draw() {
+
+    //the block
     fill("#66ccff")
     rect(this.x, this.y, this.w, this.h);
   }
 
 hit() {
 
+  //sound effect for hitting the block
 if (this.y < ball.y + ball.h && this.y + this.h > ball.y){
       if(this.x < ball.x + ball.w && this.x + this.w > ball.x){
         ball.vy *= -1;
