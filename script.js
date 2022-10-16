@@ -5,7 +5,8 @@ var gameState = 0;
 var audio = new Audio('Spazzmatica-Polka.mp3');
 var audio1 = new Audio('cowbell_os_1-89685.mp3');
 var audio2 = new Audio('man-is-he-mega-glbml-22045.mp3');
- 
+
+//The images for the game
 function preload() {
   	homescreen = loadImage('Intro-page-replit.jpg');
 	 bg = loadImage('Schermopname%20(14).png');
@@ -26,7 +27,7 @@ function setup() {
   	}
 }
  
- 
+ //The gameStates
 function draw() {
   	background(bg);
   	if (gameState == 0) {
