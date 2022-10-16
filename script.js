@@ -105,7 +105,7 @@ function keyPressed(){
 			ball = null;
 			blocks = [];
 			setup();
-			gameState = 0;
+			gameState = 1;
 		} else if (gameState == 3) {
 			player = null;
 			ball = null;
